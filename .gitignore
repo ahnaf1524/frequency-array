@@ -1,0 +1,13 @@
+# Ignore all .txt files
+*.txt
+
+# Ignore all .exe files in the project
+*.exe
+
+# Ignore .exe files inside /solve-problems/ directory
+/solve-problems/*.exe
+/solve-problems/*.txt
+/solve-problems/*.txt
+
+# Ignore VSCode config folder
+.vscode/
