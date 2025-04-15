@@ -10,6 +10,7 @@
 /solve-problems/*.txt
 /solve-problems/*.o
 /solve-problems/practice_anagram_string.c
+/solve-problems/preview.c
 /solve-problems/*.cpp
 /solve-problems/*.java
 /solve-problems/*.py
