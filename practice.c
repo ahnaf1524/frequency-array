@@ -2,44 +2,32 @@
 #include <string.h>
 #include <stdbool.h>
 
-bool areAnagrams(char s1[], char s2[]) {
-  
-  if(strlen(s1) != strlen(s2)) return false;
-
-  int freq[26] = {0};
-  
-  for(int i = 0; s1[i] != '\0'; ++i) {
-    freq[s1[i] - 'a']++;
-    freq[s2[i] - 'a']--;
-  }
-
-  for(int i = 0; i < 26; ++i) {
-    if(freq[i] != 0) {
-      return false;
-    }
-  }
-  return true;
-}
-
-
 int main() {
 
-  // "apple" --> "ppale" - anagram
-  // "cow" --> "cows"  - anagram
-  // len is same
-  // both string have same character 
-  // order doesn't matter
-  // with same frequency (one char only once)
+  char str[1001];
+  scanf("%s");
 
-  char s1[100], s2[100];
-  scanf("%s%s",s1, s2);
+  int freq[26] = {0};
 
-  if(areAnagrams(s1, s2)) {
-    printf("Anagram\n");
+  for(int i = 0; str[i] != '\0'; ++i) {
+    char ch = str[i];
+    freq[ch - 'a']++;
   }
-  else {
-    printf("Not an anagram\n");
+
+  bool isUnique = 1;
+  for(int i = 0; i < 26; ++i) {
+    char ch = str[i];
+    if(freq[ch - 'a'] > 0) {
+      isUnique = false;
+      break;
+    }
+    isUnique = true;
   }
+   if (isUnique) {
+        printf("YES, all characters are unique\n");
+    } else {
+        printf("NO, duplicate characters found\n");
+    }
   return 0;
 }
 
