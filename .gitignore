@@ -8,6 +8,12 @@
 /solve-problems/*.exe
 /solve-problems/*.txt
 /solve-problems/*.txt
+/solve-problems/*.o
+/solve-problems/practice_anagram_string.c
+/solve-problems/*.cpp
+/solve-problems/*.java
+/solve-problems/*.py
+
 
 # Ignore VSCode config folder
 .vscode/
